@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Стадиони</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <style>
+        p{
+            margin-left:20px;
+            margin-right:20px;
+        }
+        h2{
+            margin-left:20px;
+        }
+
+        div.gallery {
+            display:inline-block;
+            border: 1px solid #ccc;
+            width: 308px;
+            margin-left:20px;
+            margin-right:20px;
+            margin-top:10px;
+
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: 130px;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .like, .dislike {
+            display: inline-block;
+            margin-bottom: 1px;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 6px 10px;
+            font-size: 14px;
+            line-height: 1.428571429;
+            border-radius: 4px;
+            margin-left: 4px;
+            margin-right: 4px;
+            width:143px;
+        }
+        .like{
+            background: lightgreen;
+        }
+        .dislike{
+            background: #ff756d;
+        }
+        .qty1, .qty2 {
+            border: none;
+            width:20px;
+            background: transparent;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="table">
+
+    <div id="header">
+        <ul>
+            <li><a href="index.html">ПОЧЕТНА</a></li>
+            <li><a href="stadioni.html" class="active">СТАДИОНИ</a></li>
+            <li><a href="reprezentacii.html">РЕПРЕЗЕНТАЦИИ</a></li>
+            <li><a href="prodavnica.html">ПРОДАВНИЦА</a></li>
+            <li><a href="galerija.html">ГАЛЕРИЈА</a></li>
+            <li><a href="kontakt.html">КОНТАКТ</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+
+        <h2>Стадиони</h2>
+        <p>
+            Русија ги предложи следниве градови: Калининград, Казањ, Краснодар, Москва, Нижни Новгород, Ростов на Дон, Санкт Петербург, Самара, Сочи, Волгоград и Екатеринбург. Значи, 11 градови, а 12 стадиони. Од нив 3 ќе бидат реновирани, а 9 ќе бидат новоизградени.
+        </p>
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/luzhniki_top2.jpg">
+                <img src="http://www.stadiumguide.com/wp-content/uploads/luzhniki_top2.jpg" >
+            </a>
+            <div class="desc">Luzhniki Stadium<br>Capacity: 80,000 seats<br>Opening: 1956</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/stpetersburgnew_top.jpg">
+                <img src="http://www.stadiumguide.com/wp-content/uploads/stpetersburgnew_top.jpg" >
+            </a>
+            <div class="desc">Saint Petersburg Stadium<br>Capacity: 67,000 seats<br>Opening: 2017</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://stadiumdb.com/pictures/stadiums/rus/fisht_olympic_stadium/fisht_olympic_stadium13.jpg">
+                <img src="http://stadiumdb.com/pictures/stadiums/rus/fisht_olympic_stadium/fisht_olympic_stadium13.jpg" >
+            </a>
+            <div class="desc">Fisht Olympic Stadium<br>Capacity: 48,000 seats<br> Opening: 2013</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/ekaterinburgarena_top1.jpg">
+                <img src="http://www.stadiumguide.com/wp-content/uploads/ekaterinburgarena_top1.jpg" >
+            </a>
+            <div class="desc">Ekaterinburg Arena<br>Capacity: 45,000 seats<br>Opening: 2017</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/kazanarena_top.jpg">
+                <img src="http://www.stadiumguide.com/wp-content/uploads/kazanarena_top.jpg" >
+            </a>
+            <div class="desc">Kazan Arena<br>Capacity: 45,000 seats<br>Opening: 2013</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://img.fifa.com/mm/photo/tournament/competition/02/90/55/58/2905558_big-lnd.jpg">
+                <img src="http://img.fifa.com/mm/photo/tournament/competition/02/90/55/58/2905558_big-lnd.jpg" >
+            </a>
+            <div class="desc">Nizhny Novgorod Stadium<br>Capacity: 45,000 seats<br>Opening: 2017 </div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/rostov_top.jpg">
+                <img src="http://www.stadiumguide.com/wp-content/uploads/rostov_top.jpg" >
+            </a>
+            <div class="desc">Rostov Arena<br>Capacity: 45,000 seats<br>Opening: 2017</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/samaraarena_top.jpg">
+                <img src="http://www.stadiumguide.com/wp-content/uploads/samaraarena_top.jpg" >
+            </a>
+            <div class="desc">Samara Arena<br>Capacity: 45,000 seats<br>Opening: 2017</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/mordoviaarena_top.jpg">
+                <img src="http://www.stadiumguide.com/wp-content/uploads/mordoviaarena_top.jpg" >
+            </a>
+            <div class="desc">Mordovia Arena<br>Capacity: 45,000 seats<br>Opening: 2017</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/volgograd_top.jpg">
+            <img src="http://www.stadiumguide.com/wp-content/uploads/volgograd_top.jpg" >
+            </a>
+            <div class="desc">Volgograd Stadium<br>Capacity: 45,000 seats<br>Opening: 2017</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/kaliningrad_top.jpg">
+                <img src="http://www.stadiumguide.com/wp-content/uploads/kaliningrad_top.jpg" >
+            </a>
+            <div class="desc">Kaliningrad Stadium<br>Capacity: 35,212 seats<br>Opening: 2017</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+        </div>
+
+        <div class="gallery">
+
+            <a target="_blank" href="http://www.stadiumguide.com/wp-content/uploads/otkritie_top.jpg">
+
+            <img src="http://www.stadiumguide.com/wp-content/uploads/otkritie_top.jpg" />
+            </a>
+            <div class="desc">Spartak Stadium<br>Capacity: 42,000 seats<br>Opening: 2014</div>
+            <button class="like">
+                Like <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+            </button>
+            <button class="dislike">
+                Dislike <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+            </button>
+
+        </div>
+
+        <hr>
+        <div id="footer" align="center">
+            &copy; 2018 година | Мартин Самарџиев
+        </div>
+    </div>
+
+    <script>
+
+        $(function () {
+            $(".like").click(function () {
+                var input = $(this).find('.qty1');
+                input.val(parseInt(input.val())+ 1);
+
+            });
+            $(".dislike").click(function () {
+                var input = $(this).find('.qty2');
+                input.val(input.val() - 1);
+            });
+        });
+
+    </script>
+
+</body>
+</html>

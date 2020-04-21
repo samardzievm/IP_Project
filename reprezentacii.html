@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Репрезентации</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <style>
+        img{
+            width:200px;
+            height:300px;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            margin: 30px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+
+        }
+
+        .slider-wrapper {
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .inner-wrapper {
+            width: 500%;
+            height: 100%;
+            position: relative;
+            left: -100%;
+
+        }
+
+        .slide {
+            width: calc(100% / 5);
+            height: 100%;
+            float: left;
+            font-size: 100px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            width: 30px;
+            height: 30px;
+            border-top: 2px solid black;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .prev {
+            border-left: 2px solid black;
+            left: 15%;
+            transform: rotate(-45deg);
+            padding:5px;
+        }
+
+        .next {
+            border-right: 2px solid black;
+            right: 15%;
+            transform: rotate(45deg);
+            padding:5px;
+        }
+
+
+        #pozicija {
+            font-size:30px;
+            margin-left:20px;
+        }
+        #pozicija span{
+            color:grey;
+        }
+
+        h2{
+            margin-left:20px;
+        }
+        #groups{
+            width:96%;
+            height:400px;
+            margin-left:20px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div id="table">
+
+    <div id="header">
+        <ul>
+            <li><a href="index.html">ПОЧЕТНА</a></li>
+            <li><a href="stadioni.html">СТАДИОНИ</a></li>
+            <li><a href="reprezentacii.html" class="active">РЕПРЕЗЕНТАЦИИ</a></li>
+            <li><a href="prodavnica.html">ПРОДАВНИЦА</a></li>
+            <li><a href="galerija.html">ГАЛЕРИЈА</a></li>
+            <li><a href="kontakt.html">КОНТАКТ</a></li>
+        </ul>
+    </div>
+
+    <h2>Репрезентации</h2>
+    <div class="container">
+
+        <div class="slider-wrapper">
+
+            <div class="inner-wrapper">
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Football_Federation_Islamic_Republic_of_Iran.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Иран <br>
+                        <span>Континент:</span>Азија
+                    </div>
+
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d4/JFA_Japan_national_team_logo_2017.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Јапонија <br>
+                        <span>Континент:</span>Азија
+                    </div>
+
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Socceroos_logo.png" > <br>
+                    <div id="pozicija">
+                        <span>Име:</span>Австралија <br>
+                        <span>Континент:</span>Австралија
+                    </div>
+
+                </div>
+
+
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/02/KSA-Badge.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Саудиска Арабија <br>
+                        <span>Континент:</span>Азија
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Emblem_of_Korea_Football_Association.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Јужна Кореа <br>
+                        <span>Континент:</span>Азија
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/Egypt_FA.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Египет <br>
+                        <span>Континент:</span>Африка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/b/b4/FRM-Maroc.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Мороко <br>
+                        <span>Континент:</span>Африка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Nigeria_Football_Federation_crest.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Нигерија <br>
+                        <span>Континент:</span>Африка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Senegal_national_football_team_logo.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Сенегал <br>
+                        <span>Континент:</span>Африка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/5d/Logo_federation_tunisienne_de_football-copy.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Тунис <br>
+                        <span>Континент:</span>Африка
+                    </div>
+                </div>
+
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/f5/Costa_Rica_football_association.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Коста Рика <br>
+                        <span>Континент:</span>Северна Америка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/ce/Selecci%C3%B3n_Nacional_de_M%C3%A9xico_%28logo%29.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span>Мексико <br>
+                        <span>Континент:</span>Северна Америка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Panama_FA_2.svg/1200px-Panama_FA_2.svg.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Панама <br>
+                        <span>Континент:</span>Северна Америка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/8/84/Afa_logo_jerseys.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Аргентина <br>
+                        <span>Континент:</span>Јужна Америка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/99/Confedera%C3%A7%C3%A3o_Brasileira_de_Futebol_%28escudo%29.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Бразил <br>
+                        <span>Континент:</span>Јужна Америка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/6/61/Federacion_Colombiana_de_Futbol_logo.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Колумбија  <br>
+                        <span>Континент:</span>Јужна Америка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Fpf-logo.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Перу <br>
+                        <span>Континент:</span>Јужна Америка
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Uruguayan_Football_Association_logo.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Уругвај  <br>
+                        <span>Континент:</span>Јужна Америка
+                    </div>
+                </div>
+
+
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/f5/Belgium_urbsfa.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Белгија <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Croatia_football_federation.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Хрватска <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/4f/Dansk_Boldspil-Union_logo.svg" > <br>
+                    <div id="pozicija">
+                        <span>Име:</span> Данска  <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/38/England_crest_2009.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Англија <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/Equipe_de_France_de_football_Logo.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Франција <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/e3/DFBEagle.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Германија <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Iceland_FA.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Исланд <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Herb_Polski.svg/1200px-Herb_Polski.svg.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Полска <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Portuguese_Football_Federation.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Португалија <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Coat_of_Arms_of_the_Russian_Federation_2.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Русија <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/1/1e/Fudbalski_savez_Srbije.svg" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Србија <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/31/Spain_National_Football_Team_badge.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Шпанија <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Sweden_new_national_football_team_logo.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Шведска <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/SFV_Logo.svg/1200px-SFV_Logo.svg.png" > <br>
+
+                    <div id="pozicija">
+                        <span>Име:</span> Швајцарија <br>
+                        <span>Континент:</span>Европа
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="button prev"></div>
+        <div class="button next"></div>
+
+
+    </div>
+
+    <h2>Групи</h2>
+    <img src="images/grupi1.jpg" id="groups">
+
+    <hr>
+    <div id="footer" align="center">
+        &copy; 2018 година | Мартин Самарџиев
+    </div>
+
+</div>
+
+
+<script>
+
+    $(function() {
+        var inWrap = $('.inner-wrapper');
+        $('.prev').on('click', function() {
+            inWrap.animate({left: '0%'}, 300, function(){
+                inWrap.css('left', '-100%');
+                $('.slide').first().before($('.slide').last());
+            });
+        });
+
+        $('.next').on('click', function() {
+            inWrap.animate({left: '-200%'}, 300, function(){
+                inWrap.css('left', '-100%');
+                $('.slide').last().after($('.slide').first());
+            });
+        });
+    });
+
+</script>
+
+</body>
+</html>

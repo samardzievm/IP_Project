@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерија</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <style>
+
+        div.gallery {
+            border: 1px solid #ccc;
+            display:grid;
+            width: 100%;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        #form {
+
+            margin-left:20px;
+            width: 400px;
+
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+
+        }
+
+        form div + div {
+            margin-top: 1em;
+        }
+
+        label {
+
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+        }
+
+        input,textarea {
+            border-radius: 5px;
+            font: 1em sans-serif;
+            width: 300px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+            min-width: 300px;
+            max-width: 300px;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #000;
+        }
+
+        textarea {
+            vertical-align: top;
+            height: 5em;
+        }
+
+        button {
+            text-align:center;
+        }
+
+        h2,p{
+            margin-left:20px;
+        }
+
+        #sliki{
+            margin-top:20px;
+        }
+        #sliki button{
+            display:inline-block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="table">
+
+    <div id="header">
+        <ul>
+            <li><a href="index.html">ПОЧЕТНА</a></li>
+            <li><a href="stadioni.html">СТАДИОНИ</a></li>
+            <li><a href="reprezentacii.html">РЕПРЕЗЕНТАЦИИ</a></li>
+            <li><a href="prodavnica.html">ПРОДАВНИЦА</a></li>
+            <li><a href="galerija.html" class="active">ГАЛЕРИЈА</a></li>
+            <li><a href="kontakt.html">КОНТАКТ</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+
+        <h2>Галерија</h2>
+        <p>По што ги паметите претходните светски првенства во фудбал?</p>
+        <p>Споделете ги незаборавните моменти со нас!</p>
+        <div id="form">
+            <div>
+                <label>URL: </label>
+                <input type="text" id="url" placeholder="  Внесете линк од сликата">
+
+            </div>
+            <br>
+            <div>
+                <label>Краток опис:</label>
+                <textarea id="description"></textarea>
+            </div>
+
+            <button onclick="dodadi()">Додади</button>
+        </div>
+
+        <div id="sliki">
+            <div class="gallery">
+                <a target="_blank" href="http://football2014wc.com/wp-content/uploads/2014/07/FIFA-World-Cup-2014-Best-Moments.jpg">
+                    <img src="images/ger.jpg"  >
+                </a>
+                <div class="desc">Германија станува светски шампион во фудбал 2014 година во Бразил</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="http://football2014wc.com/wp-content/uploads/2014/07/Luis-Suarez-bites-Giorgio-Chiellini.jpg">
+                    <img src="images/suarez.jpg"  >
+                </a>
+
+                <div class="desc">Ненахранетиот Луис Суарез го гризнува Киелини во дуелот против Италија - СП Бразил 2014 година </div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="http://images.performgroup.com/di/library/GOAL_INTERNATIONAL/2e/e7/zinedine-zidane-france-italy-2006-world-cup-final_1fya0xdd5xyjt1o60h8w7z3ya1.jpg?t=-339136813">
+                    <img src="http://images.performgroup.com/di/library/GOAL_INTERNATIONAL/2e/e7/zinedine-zidane-france-italy-2006-world-cup-final_1fya0xdd5xyjt1o60h8w7z3ya1.jpg?t=-339136813" width="600" height="400">
+                </a>
+                <div class="desc">Зидан заработува црвен картон на последниот натпревар од неговата кариера играјќи во финалето против Италија 2006 година</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="http://blogs.ubc.ca/chrisannekouzas/files/2010/10/vuvuzela-crowd.jpg">
+                    <img src="http://blogs.ubc.ca/chrisannekouzas/files/2010/10/vuvuzela-crowd.jpg"  >
+                </a>
+                <div class="desc">Традиционалните навивачки вувузели на СП во Африка 2010 година</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="http://d3nfwcxd527z59.cloudfront.net/content/uploads/2017/10/26115730/Paul-the-octopus.jpg">
+                    <img src="http://d3nfwcxd527z59.cloudfront.net/content/uploads/2017/10/26115730/Paul-the-octopus.jpg"  >
+                </a>
+                <div class="desc">Точното предвидување на октоподот Пол</div>
+            </div>
+
+        </div>
+
+        <hr>
+        <div id="footer" align="center">
+            &copy; 2018 година | Мартин Самарџиев
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    function dodadi(){
+        var url = document.getElementById('url').value;
+        console.log(url);
+        var description = document.getElementById('description').value;
+        var add = document.getElementById('sliki');
+
+        add.innerHTML += "<div class='gallery'>" +
+                            "<a target='_blank' href='" + url +  "'>" +
+                                "<img src='" + url +  "'>" +
+                            "</a>" +
+                            "<div class='desc'>" + description  + "</div>" +
+                        "</div>";
+    }
+
+</script>
+
+</body>
+</html>

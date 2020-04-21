@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Продавница</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="json/prodavnica.json"></script>
+
+    <style>
+
+        #products_container{
+            width:70%;
+            background:white;
+            margin:0px auto;
+        }
+        .item-container{
+            width:100%;
+            overflow:hidden;
+            border-bottom:1px solid #e1e1e1;
+            padding: 6px 0px;
+        }
+        .col-s{
+            width:31%;
+            float:left;
+            margin:0px 4px;
+        }
+        button{
+            text-align: center;
+            text-transform: uppercase;
+            padding: 8px 17px;
+            border-radius: 4px;
+            margin: 2px;
+            border: none;
+            background-color: #47d2d3;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: 400;
+            vertical-align: middle;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 13px;
+            color: #FFF;
+        }
+        #wish_list{
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            height: 30px;
+            width:300px;
+            background: white;
+            border:1px solid #e1e1e1;
+            transition: 0.4s all;
+        }
+        #wish_list .wish_list_heading {
+            margin: 0px 0px;
+            color: white;
+            height: 30px;
+            background-color: #47d2d3;;
+            verflow: hidden;
+            padding: 6px 3px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #wish_list_item{
+            width:100%;
+            text-align:center;
+            border-spacing: 0px;
+            border-collapse: separate;
+        }
+        #msg{
+            position: fixed;
+            display: none;
+            padding: 10px 25px;
+            background: white;
+            border: 1px solid #d1d1d1;
+            border-radius: 4px;
+            font-size: 15px;
+            width:30%;
+            text-align:center;
+        }
+        .wishlist-item{
+            padding:10px 5px;
+            background:#111;
+            color:#f1f1f1;
+        }
+        .w-premove{
+            font-size:23px;
+            cursor:pointer;
+        }
+        .w-pname,.w-price{
+            font-size:13px;
+        }
+
+        #mhead {
+            border: 1px solid #e3e3e3;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            font-family: georgia;
+            width: 100%;
+            background:white;
+        }
+
+        img{
+            width:120px;
+            height:120px;
+        }
+
+        h2{
+            margin-left:20px;
+            Font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+    </style>
+
+    <script>
+
+        function load() {
+            var mydata = JSON.parse(data);
+            //alert(mydata.length);
+
+            var topka = document.getElementById('1');
+            var ctopka = document.getElementById('11')
+            topka.innerHTML += mydata[0].product + "<br>";
+            ctopka.innerHTML += "&euro;"+ mydata[0].price;
+
+            var kapa = document.getElementById('2');
+            var ckapa  = document.getElementById('22');
+            kapa.innerHTML += mydata[1].product + "<br>";
+            ckapa.innerHTML += "&euro;"+ mydata[1].price;
+
+            var maica = document.getElementById('3');
+            var cmaica  = document.getElementById('33');
+            maica.innerHTML += mydata[2].product + "<br>";
+            cmaica.innerHTML += "&euro;"+ mydata[2].price;
+
+            var casa = document.getElementById('4');
+            var ccasa  = document.getElementById('44');
+            casa.innerHTML += mydata[3].product + "<br>";
+            ccasa.innerHTML += "&euro;"+ mydata[3].price;
+
+            var igracka = document.getElementById('5');
+            var cigracka  = document.getElementById('55');
+            igracka.innerHTML += mydata[4].product + "<br>";
+            cigracka.innerHTML += "&euro;"+ mydata[4].price;
+
+            var album = document.getElementById('6');
+            var calbum  = document.getElementById('66');
+            album.innerHTML += mydata[5].product + "<br>";
+            calbum.innerHTML += "&euro;"+ mydata[5].price;
+
+            var dres = document.getElementById('7');
+            var cdres  = document.getElementById('77');
+            dres.innerHTML += mydata[6].product + "<br>";
+            cdres.innerHTML += "&euro;"+ mydata[6].price;
+
+            var privrzok = document.getElementById('8');
+            var cprivrzok  = document.getElementById('88');
+            privrzok.innerHTML += mydata[7].product + "<br>";
+            cprivrzok.innerHTML += "&euro;"+ mydata[7].price;
+
+        }
+
+        $(document).ready(function () {
+            $('img').mouseover(function () {
+                $(this).animate({ width: "222px", height: "210px" }, 500);
+            });
+            $('img').mouseout(function () {
+                $(this).animate({ width: "120px", height: "120px" }, 100);
+            });
+        });
+    </script>
+
+</head>
+
+<body onload="load()">
+
+<div id="table">
+
+    <div id="header">
+        <ul>
+            <li><a href="index.html">ПОЧЕТНА</a></li>
+            <li><a href="stadioni.html">СТАДИОНИ</a></li>
+            <li><a href="reprezentacii.html">РЕПРЕЗЕНТАЦИИ</a></li>
+            <li><a href="prodavnica.html" class="active">ПРОДАВНИЦА</a></li>
+            <li><a href="galerija.html">ГАЛЕРИЈА</a></li>
+            <li><a href="kontakt.html">КОНТАКТ</a></li>
+        </ul>
+    </div>
+
+    <div id="mhead"><h2 align="left">Продавница</h2></div>
+    <div id='msg'></div>
+    <div id='products_container'>
+        <div class='item-container'>
+            <div class='product_name col-s' >
+                <div id="1"></div>
+                <img src='https://http2.mlstatic.com/pelota-adidas-mundial-rusia-2018-top-replica-n5-adidas-D_NQ_NP_974787-MLA26534212490_122017-F.jpg' />
+            </div>
+            <div class='product_price col-s'>
+                <div id="11"></div>
+
+            </div>
+            <div class='product_action col-s'>
+                <button class='wishlist' product_name='Фудбалска топка' product_id='product1' product_price='50'>Add to wishlist</button>
+            </div>
+        </div>
+
+
+        <div class='item-container'>
+            <div class='product_name col-s'>
+                <div id="2"></div>
+                <img src='https://www.imagehandler.net/?istyle=0000&fmt=png&img=A1005732000&iset=0100&c=999&iindex=0062&w=600&h=600' />
+            </div>
+            <div class='product_price col-s'>
+                <div id="22"></div>
+            </div>
+            <div class='product_action col-s'>
+                <button class='wishlist' product_name='Капа' product_id='product2' product_price='10'>Add to wishlist</button>
+            </div>
+        </div>
+
+        <div class='item-container'>
+            <div class='product_name col-s'>
+                <div id="3"></div>
+                <img src='https://i.pinimg.com/originals/fa/43/2f/fa432f618a5601df55c813163e484aea.jpg' />
+            </div>
+            <div class='product_price col-s'>
+                <div id="33"></div>
+            </div>
+            <div class='product_action col-s'>
+                <button class='wishlist' product_name='Маица' product_id='product3' product_price='15'>Add to wishlist</button>
+            </div>
+        </div>
+
+        <div class='item-container'>
+            <div class='product_name col-s'>
+                <div id="4"></div>
+                <img src='https://buysoccercardsonline.com/wp-content/uploads/2018/01/Russia_2018_FWC_trophy-glass.jpg'/>
+            </div>
+            <div class='product_price col-s'>
+                <div id="44"></div>
+            </div>
+            <div class='product_action col-s'>
+                <button class='wishlist' product_name='Чаша' product_id='product4' product_price='5'>Add to wishlist</button>
+            </div>
+        </div>
+
+        <div class='item-container'>
+            <div class='product_name col-s'>
+                <div id="5"></div>
+                <img src='http://i.ebayimg.com/images/i/263054344859-0-1/s-l1000.jpg'/>
+            </div>
+            <div class='product_price col-s'>
+                <div id="55"></div>
+            </div>
+            <div class='product_action col-s'>
+                <button class='wishlist' product_name='Играчка' product_id='product5' product_price='12'>Add to wishlist</button>
+            </div>
+        </div>
+
+        <div class='item-container'>
+            <div class='product_name col-s'>
+                <div id="6"></div>
+                <img src='https://2.bp.blogspot.com/-QaOe-Vh_l5k/WMuW-DT-riI/AAAAAAABjQw/03H_T5TgVuEDnmrgvRTTRZv8xETUj4NUQCLcB/s1600/2017%2BPanini%2B-%2BRoad%2Bto%2B2018%2BWorld%2BCup%2B-%2BDisplay%2BBox%2B-%2BUSA2.jpg' />
+            </div>
+            <div class='product_price col-s'>
+                <div id="66"></div>
+            </div>
+            <div class='product_action col-s'>
+                <button class='wishlist' product_name='Албум со сликички' product_id='product6' product_price='4'>Add to wishlist</button>
+            </div>
+        </div>
+
+        <div class='item-container'>
+            <div class='product_name col-s'>
+                <div id="7"></div>
+                <img src='http://www.telegraph.co.uk/content/dam/football/2017/11/07/KITS_trans_NvBQzQNjv4Bq2oUEflmHZZHjcYuvN_Gr-bVmXC2g6irFbtWDjolSHWg.png?imwidth=450'/>
+            </div>
+            <div class='product_price col-s'>
+                <div id="77"></div>
+            </div>
+            <div class='product_action col-s'>
+                <button class='wishlist' product_name='Дрес' product_id='product7' product_price='100'>Add to wishlist</button>
+            </div>
+        </div>
+
+        <div class='item-container'>
+            <div class='product_name col-s'>
+                <div id="8"></div>
+                <img src='https://ae01.alicdn.com/kf/HTB1A9VoemYH8KJjSspdq6ARgVXaE/Jeebel-2018-World-Cup-Russian-Souvenir-Soccer-Football-Keychain-National-Football-Team-The-Road-To-Russia.jpg_640x640.jpg'/>
+            </div>
+            <div class='product_price col-s'>
+                <div id="88"></div>
+            </div>
+            <div class='product_action col-s'>
+                <button class='wishlist' product_name='Приврзок' product_id='product8' product_price='5'>Add to wishlist</button>
+            </div>
+        </div>
+    </div>
+
+    <div id='wish_list' class='col-s'>
+        <p class="wish_list_heading">
+            <span id='listitem'>0</span>
+            <span id='p_label'>Product</span>
+        </p>
+        <table id='wish_list_item' border='0'></table>
+    </div>
+
+    <hr>
+    <div id="footer" align="center">
+        &copy; 2018 година | Мартин Самарџиев
+    </div>
+
+</div>
+
+<script>
+
+    var wish_list = new Array();
+    $(function(){
+        $(".wishlist").on("click",function(){
+            $data = "";
+            $product_id = $(this).attr("product_id");
+            $product_name = $(this).attr("product_name");
+            $prduct_price = $(this).attr("product_price");
+            if($.inArray($product_id,wish_list)==-1){
+                $product_str = "<tr class='wishlist-item' id='list_id_"+$product_id+"'><td class='w-pname'>"+$product_name+"</td><td class='w-price'>&euro; "+$prduct_price+"</td><td class='w-premove' wpid='"+$product_id+"'>x</td></tr>";
+                $("#wish_list_item").append($product_str);
+                wish_list.push($product_id);
+                show_message("Product added");
+            }
+
+            count_items_in_wishlist_update();
+        });
+        $(".wish_list_heading").on("click",function(){
+            if(!$(this).hasClass("up")){
+                $("#wish_list").css("height","300px");
+                $(this).addClass("up");
+                $("#wish_list").css("overflow","auto");
+            }else{
+                $("#wish_list").css("height","30px");
+                $(this).removeClass("up");
+                $("#wish_list").css("overflow","hidden");
+            }
+
+        });
+        $("#wish_list_item").on("click",".w-premove",function(){
+            $product_id = $(this).attr("wpid");
+            $("#list_id_"+$product_id).remove();
+            wish_list = $.grep( wish_list, function( n, i ) {
+                return n != $product_id;
+            });
+            show_message("Product removed");
+            count_items_in_wishlist_update();
+        });
+    });
+    function show_message($msg){
+        $("#msg").html($msg);
+        $top = Math.max(0, (($(window).height() - $("#msg").outerHeight()) / 2) + $(window).scrollTop()) + "px";
+        $left = Math.max(0,(($(window).width() - $("#msg").outerWidth()) / 2) + $(window).scrollLeft()) + "px";
+        $("#msg").css("left",$left);
+        $("#msg").animate({opacity: 0.6,top: $top}, 400,function(){
+            $(this).css({'opacity':1});
+        }).show();
+        setTimeout(function(){$("#msg").animate({opacity: 0.6,top: "0px"}, 400,function(){
+            $(this).hide();
+        });},1000);
+    }
+    function count_items_in_wishlist_update(){
+        $("#listitem").html(wish_list.length);
+        if(wish_list.length>1){
+            $("#p_label").html("Products");
+        }else{
+            $("#p_label").html("Product");
+        }
+    }
+
+</script>
+
+</body>
+</html>
